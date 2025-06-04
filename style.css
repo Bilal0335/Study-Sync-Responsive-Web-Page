@@ -34,7 +34,7 @@ body {
   padding: 1rem;
 }
 .logo {
-  background-color: lightblue;
+  /* background-color: lightblue; */
   font-size: 2rem;
   font-weight: 700;
   color: var(--text-color);
@@ -49,4 +49,58 @@ body {
 }
 .logo_text {
   font-size: 2rem;
+}
+.nav {
+  display: none;
+  gap: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .nav {
+    display: flex;
+  }
+}
+.nav_link {
+  color: #718096;
+  font-size: 1.125rem;
+  font-weight: 600;
+  transform: color 0.1s;
+}
+.nav_link:hover {
+  color: var(--link-color);
+}
+.contact_button {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  transition: background-color 0.2s, transform 0.2s;
+  border: none;
+  outline: none;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .contact_button {
+    display: inline-block;
+  }
+}
+
+.menu_button {
+  display: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem 1.1rem;
+}
+@media screen and (max-width: 768px) {
+  .menu_button {
+    display: block;
+  }
+}
+.menu_icon {
+  width: 2rem;
+  height: 2rem;
 }

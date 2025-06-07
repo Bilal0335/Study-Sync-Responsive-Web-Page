@@ -24,17 +24,16 @@ body {
   background-color: var(--background-color);
   padding: 0.1rem;
 }
+/* ! Navbar Section Start */
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   max-width: 1280px;
-  background-color: var(--light-gray);
   padding: 1rem;
 }
 .logo {
-  /* background-color: lightblue; */
   font-size: 2rem;
   font-weight: 700;
   color: var(--text-color);
@@ -105,6 +104,7 @@ body {
   height: 2rem;
 }
 
+/* ! Navbar Section End */
 /* ! Hero Section Start */
 .main_section {
   max-width: 1280px;
@@ -181,17 +181,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: slideFormRight 1s ease forwards;
+  animation: slideFromRight 1s ease forwards;
   opacity: 0;
 }
-@keyframes slideFormRight {
+@keyframes slideFromRight {
   0% {
     opacity: 0;
-    transform: translateX(0);
+    transform: translateX(100px); /* start from right side */
   }
   100% {
     opacity: 1;
-    transform: translateX(-100px);
+    transform: translateX(0); /* come to original position */
   }
 }
 
@@ -207,3 +207,94 @@ body {
   height: 100%;
   width: 100%;
 }
+
+@media screen and (min-width: 768px) {
+  .main_section {
+    flex-direction: row;
+  }
+  .content_left {
+    width: 50%;
+    text-align: left;
+  }
+  .section_title {
+    padding-left: 0;
+  }
+  .button_group {
+    justify-content: flex-start;
+    padding-left: 0;
+  }
+  .section_label {
+    font-size: 1rem;
+  }
+  .section_title {
+    font-size: 4rem;
+    text-shadow: 13px 12px 4px rgba(0, 0, 0, 0.1);
+  }
+  .image_container {
+    height: 67vh;
+  }
+  .section_description {
+    font-size: 1.25rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    line-height: 2rem;
+    width: 80%;
+  }
+}
+/* ! Hero Section End */
+
+/* ! Company Logo Section Start */
+.company_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  animation: slideFormLeft 1s ease forwards;
+}
+.company_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.6rem;
+  padding: 1rem;
+  background-color: var(--light-gray);
+  border: none;
+  border-radius: 0.625rem;
+  /* margin-top: 2rem; */
+  margin-bottom: 3rem;
+  padding: 1.8rem 2.5rem;
+
+}
+.company_logo {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--gray);
+  display: flex;
+
+  gap: 0.5rem;
+}
+.svg_img {
+  height: 1.56rem;
+}
+.logo_text {
+  font-size: 1rem;
+  font-weight: 700;
+  color: gray;
+  text-align: center;
+}
+.company_title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 640px) {
+  .company_grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .company_title {
+    font-size: 2.3rem;
+    font-weight: bold;
+  }
+}
+/* ! Company Logo Section End */

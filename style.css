@@ -300,7 +300,6 @@ body {
 
 /* ! Feature Container Section Start */
 .feature_container {
-  
   background-color: var(--light-gray);
   padding: 2.5rem 0;
   text-align: center;
@@ -404,7 +403,5 @@ body {
 @media screen and (max-width: 768px) {
   .feature_grid {
     grid-template-columns: repeat(1, 1fr);
-  }
-  
-  
+  } 
 }
